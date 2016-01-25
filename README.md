@@ -32,5 +32,5 @@ The API would return:
 #Tips
 - Use body-parser middleware to retrieve the post data.
 - Use ````npm start```` to start the server. This will use a command line tool called [nodemon](http://nodemon.io/). Nodemon will watch for changes in the project folder and restart the server **AUTOMATICALLY** when you save a file. ::smile::
-- Use ````npm test``` to run the tests. Make sure your server is running.
+- Use ````npm test``` to run the tests.
 
