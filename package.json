@@ -4,7 +4,8 @@
   "description": "REST API assign for DGM 3780",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test.js"
+    "test": "mocha test.js",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
     "chai": "^3.4.1",
     "express": "^4.13.4",
     "mocha": "^2.3.4",
+    "nodemon": "^1.8.1",
     "supertest": "^1.1.0"
   }
 }
