@@ -1,7 +1,7 @@
 var expect = require('chai').expect;
 var request = require('supertest')('http://localhost:8000/api');
 
-describe('API', function(){
+describe('API - /api', function(){
   it('should respond with json', function(done){
     request
       .get('/')
@@ -13,7 +13,7 @@ describe('API', function(){
       });
   });
 
-    describe('Get Data', function () {
+    describe('GET Data - /api/data', function () {
         it('should respond with json', function(done){
             request
             .get('/data')
@@ -38,7 +38,7 @@ describe('API', function(){
       });
     })
 
-    describe('Post Data', function () {
+    describe('POST Data - api/data', function () {
         it('should respond with json', function(done){
             request
             .post('/data')
