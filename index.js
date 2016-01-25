@@ -20,6 +20,8 @@ app.post('/api/data', function (req, res) {
     res.status(200).json({query:query});
 });
 
+module.exports = app;
+
 //spin up our app
 app.listen(port, function(err){
 

@@ -1,10 +1,11 @@
 var expect = require('chai').expect;
-var request = require('supertest')('http://localhost:8000/api');
+var request = require('supertest');
+var app = require('./index.js');
 
 describe('API - /api', function(){
   it('should respond with json', function(done){
-    request
-      .get('/')
+    request(app)
+      .get('/api')
       .set('Accept', 'application/json')
       .expect(200)
       .end(function(err, res){
@@ -15,8 +16,8 @@ describe('API - /api', function(){
 
     describe('GET Data - /api/data', function () {
         it('should respond with json', function(done){
-            request
-            .get('/data')
+            request(app)
+            .get('/api/data')
             .set('Accept', 'application/json')
             .expect(200)
             .end(function(err, res){
@@ -26,8 +27,8 @@ describe('API - /api', function(){
         });
 
       it('should have a data property', function(done){
-        request
-          .get('/')
+        request(app)
+          .get('/api/data')
           .set('Accept', 'application/json')
           .expect(200)
           .end(function(err, res){
@@ -40,19 +41,19 @@ describe('API - /api', function(){
 
     describe('POST Data - api/data', function () {
         it('should respond with json', function(done){
-            request
-            .post('/data')
+            request(app)
+            .post('/api/data')
             .set('Accept', 'application/json')
             .expect(200)
             .end(function(err, res){
               if (err) return done(err);
               done();
             });
-        });
+        })
 
         it('should respond with the json data sent in the query proterty', function (done) {
-            request
-            .post('/data')
+            request(app)
+            .post('/api/data')
             .send({ data: 'ThisIsTheQuery' })
             .end(function(err, res){
                 expect(res.body).to.be.json
