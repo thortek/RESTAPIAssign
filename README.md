@@ -1,4 +1,4 @@
-# RESTAPIAssign
+# REST API Assign
 In this assignment we will be writing a simple REST API. Both GET and POST methods will be used
 
 #Steps
