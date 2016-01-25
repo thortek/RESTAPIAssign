@@ -1,9 +1,23 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser')
 var port = 8000;
 
+app.use(bodyParser.json());
+
 app.get('/api', function (req, res) {
+    res.status(200).json({ data: 'Welcome to the API' });
+});
+
+app.get('/api/data', function (req, res) {
     res.status(200).json({ data: 'landon' });
+});
+
+app.post('/api/data', function (req, res) {
+
+    var query = req.body.data;
+
+    res.status(200).json({query:query});
 });
 
 //spin up our app
