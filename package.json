@@ -1,0 +1,19 @@
+{
+  "name": "dgm3780assign2",
+  "version": "0.5.0",
+  "description": "REST API assign for DGM 3780",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/landonconover/RESTAPIAssign.git"
+  },
+  "author": "Landon Conover <landon.conover@gmail.com> (https://github.com/landonconover)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/landonconover/RESTAPIAssign/issues"
+  },
+  "homepage": "https://github.com/landonconover/RESTAPIAssign#readme"
+}
