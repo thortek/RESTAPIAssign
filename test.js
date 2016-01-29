@@ -51,7 +51,7 @@ describe('API - /api', function(){
             });
         })
 
-        it('should respond with the json data sent in the query proterty', function (done) {
+        it('should respond with the json data sent in the query property', function (done) {
             request(app)
             .post('/api/data')
             .send({ data: 'ThisIsTheQuery' })
